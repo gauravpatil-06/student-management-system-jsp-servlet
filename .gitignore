@@ -1,0 +1,28 @@
+# Java compiled files
+*.class
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Build folders
+bin/
+target/
+build/
+dist/
+
+# Server generated files
+work/
+temp/
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local configuration / secrets
+.env
+*.properties.local
+src/main/resources/hibernate.cfg.xml
+
