@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://YOUR_DB_HOST:YOUR_DB_PORT/defaultdb?sslMode=REQUIRED&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">YOUR_DATABASE_USERNAME</property>
+        <property name="hibernate.connection.password">YOUR_DATABASE_PASSWORD</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">false</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="com.student.entity.Admin"/>
+        <mapping class="com.student.entity.Teacher"/>
+        <mapping class="com.student.entity.Student"/>
+        <mapping class="com.student.entity.Subject"/>
+        <mapping class="com.student.entity.TeacherSubject"/>
+        <mapping class="com.student.entity.StudentSubjectMarks"/>
+        <mapping class="com.student.entity.StudentSubjectAssignment"/>
+        <mapping class="com.student.entity.StudentResultSummary"/>
+    </session-factory>
+</hibernate-configuration>
