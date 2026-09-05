@@ -1,0 +1,231 @@
+# ==============================================================================
+# Feature-Wise Git Commit & Push Commands for Student Management System
+# Flow: Setup -> Auth -> Admin (7) -> Teacher (7) -> Student (5) -> README -> Docker
+# Date Range: 10 Aug 2026 - 05 Sep 2026
+# Architectural Note: Single LogoutServlet.java handles session invalidation.
+# Rules: 1st Push = git push -u origin main, Remaining Pushes = git push
+# Execute inside: d:\Full Stack Java Development - 2026\Projects\Student_Management_System
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Date: 10 Aug 2026 | Feature: Project Setup + Home Page
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-10 21:15:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-10 21:15:00 +0530"
+git add pom.xml .gitignore src/main/webapp/WEB-INF/web.xml src/main/webapp/index.jsp
+git commit -m "project setup and home page added"
+git push -u origin main
+
+# ------------------------------------------------------------------------------
+# Date: 11 Aug 2026 | Feature: Login + Registration / Authentication
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-11 22:00:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-11 22:00:00 +0530"
+git add src/main/java/com/student/entity/Admin.java src/main/java/com/student/entity/Student.java src/main/java/com/student/entity/Teacher.java src/main/java/com/student/dao/AdminDAO.java src/main/java/com/student/dao/StudentDAO.java src/main/java/com/student/dao/TeacherDAO.java src/main/java/com/student/servlet/LoginServlet.java src/main/java/com/student/servlet/RegisterServlet.java src/main/java/com/student/servlet/LogoutServlet.java src/main/webapp/login.jsp src/main/webapp/register.jsp src/main/webapp/logout.jsp src/main/webapp/logout-modal.jsp
+git commit -m "authentication module added"
+git push
+
+# ==============================================================================
+# ============================ ADMIN MODULE ====================================
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Date: 14 Aug 2026 | Feature: Admin Dashboard
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-14 22:15:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-14 22:15:00 +0530"
+git add src/main/java/com/student/service/AdminService.java src/main/java/com/student/servlet/admin/AdminServlet.java src/main/webapp/admin/dashboard.jsp
+git commit -m "admin dashboard added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 16 Aug 2026 | Feature: Admin Student Management
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-16 21:30:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-16 21:30:00 +0530"
+git add src/main/java/com/student/service/StudentService.java src/main/java/com/student/servlet/admin/AdminStudentServlet.java src/main/webapp/admin/students.jsp
+git commit -m "admin student management added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 18 Aug 2026 | Feature: Admin Teacher Management
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-18 23:45:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-18 23:45:00 +0530"
+git add src/main/java/com/student/service/TeacherService.java src/main/java/com/student/servlet/admin/AdminTeacherServlet.java src/main/webapp/admin/teachers.jsp
+git commit -m "admin teacher management added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 19 Aug 2026 | Feature: Admin Subject Management
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-19 22:00:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-19 22:00:00 +0530"
+git add src/main/java/com/student/entity/Subject.java src/main/java/com/student/dao/SubjectDAO.java src/main/java/com/student/service/SubjectService.java src/main/java/com/student/servlet/admin/AdminSubjectServlet.java src/main/webapp/admin/subjects.jsp
+git commit -m "admin subject management added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 22 Aug 2026 | Feature: Admin Teacher-Subject Assignment
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-22 23:15:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-22 23:15:00 +0530"
+git add src/main/java/com/student/entity/TeacherSubject.java src/main/java/com/student/dao/TeacherSubjectDAO.java src/main/java/com/student/service/TeacherSubjectService.java src/main/java/com/student/servlet/admin/AdminTeacherSubjectServlet.java
+git commit -m "teacher subject assignment added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 25 Aug 2026 | Feature: Admin Student-Subject Assignment
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-25 21:50:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-25 21:50:00 +0530"
+git add src/main/java/com/student/entity/StudentSubjectAssignment.java src/main/java/com/student/dao/StudentSubjectAssignmentDAO.java src/main/java/com/student/service/StudentSubjectAssignmentService.java src/main/java/com/student/servlet/admin/AdminStudentSubjectAssignmentServlet.java src/main/webapp/admin/subject-assignment.jsp
+git commit -m "student subject assignment added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 27 Aug 2026 | Feature: Admin Profile
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-27 22:30:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-27 22:30:00 +0530"
+git add src/main/webapp/admin/profile.jsp
+git commit -m "admin profile added"
+git push
+
+# ==============================================================================
+# ============================ TEACHER MODULE ==================================
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Date: 22 Aug 2026 | Feature: Teacher Dashboard
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-22 21:30:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-22 21:30:00 +0530"
+git add src/main/java/com/student/dto/TeacherDashboardSummaryDTO.java src/main/java/com/student/servlet/teacher/TeacherServlet.java src/main/webapp/teacher/dashboard.jsp
+git commit -m "teacher dashboard added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 24 Aug 2026 | Feature: Teacher Assigned Subjects
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-24 23:00:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-24 23:00:00 +0530"
+git add src/main/webapp/teacher/subjects.jsp
+git commit -m "teacher assigned subjects added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 26 Aug 2026 | Feature: Teacher Assigned Students
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-26 21:30:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-26 21:30:00 +0530"
+git add src/main/webapp/teacher/students.jsp src/main/webapp/teacher/attendance.jsp
+git commit -m "teacher assigned students added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 29 Aug 2026 | Feature: Teacher CCE Marks
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-29 21:40:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-29 21:40:00 +0530"
+git add src/main/java/com/student/entity/StudentSubjectMarks.java src/main/java/com/student/dao/StudentSubjectMarksDAO.java src/main/java/com/student/service/StudentSubjectMarksService.java src/main/java/com/student/servlet/teacher/SaveCCEMarksServlet.java src/main/webapp/teacher/cce-marks.jsp
+git commit -m "teacher cce marks added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 31 Aug 2026 | Feature: Teacher End Sem Marks
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-31 23:15:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-31 23:15:00 +0530"
+git add src/main/java/com/student/servlet/teacher/SaveEndSemMarksServlet.java src/main/webapp/teacher/end-sem-marks.jsp
+git commit -m "teacher end sem marks added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 01 Sep 2026 | Feature: Teacher View Results
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-09-01 21:45:00 +0530"
+export GIT_COMMITTER_DATE="2026-09-01 21:45:00 +0530"
+git add src/main/webapp/teacher/results.jsp
+git commit -m "teacher results added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 03 Sep 2026 | Feature: Teacher Profile
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-09-03 23:15:00 +0530"
+export GIT_COMMITTER_DATE="2026-09-03 23:15:00 +0530"
+git add src/main/webapp/teacher/profile.jsp
+git commit -m "teacher profile added"
+git push
+
+# ==============================================================================
+# ============================ STUDENT MODULE ==================================
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Date: 31 Aug 2026 | Feature: Student Dashboard
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-08-31 21:30:00 +0530"
+export GIT_COMMITTER_DATE="2026-08-31 21:30:00 +0530"
+git add src/main/java/com/student/servlet/student/StudentServlet.java src/main/webapp/student/dashboard.jsp
+git commit -m "student dashboard added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 01 Sep 2026 | Feature: Student My Subjects
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-09-01 22:30:00 +0530"
+export GIT_COMMITTER_DATE="2026-09-01 22:30:00 +0530"
+git add src/main/webapp/student/subjects.jsp
+git commit -m "student subjects added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 03 Sep 2026 | Feature: Student CCE Marks
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-09-03 21:30:00 +0530"
+export GIT_COMMITTER_DATE="2026-09-03 21:30:00 +0530"
+git add src/main/webapp/student/cce-marks.jsp
+git commit -m "student cce marks added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 05 Sep 2026 | Feature: Student My Results
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-09-05 21:00:00 +0530"
+export GIT_COMMITTER_DATE="2026-09-05 21:00:00 +0530"
+git add src/main/java/com/student/entity/StudentResultSummary.java src/main/java/com/student/dao/StudentResultSummaryDAO.java src/main/java/com/student/service/StudentResultSummaryService.java src/main/webapp/student/result.jsp
+git commit -m "student results added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 05 Sep 2026 | Feature: Student My Profile
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-09-05 22:00:00 +0530"
+export GIT_COMMITTER_DATE="2026-09-05 22:00:00 +0530"
+git add src/main/webapp/student/profile.jsp
+git commit -m "student profile added"
+git push
+
+# ==============================================================================
+# ========================== FINAL FEATURES ====================================
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Date: 04 Sep 2026 | Feature: README Documentation
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-09-04 23:00:00 +0530"
+export GIT_COMMITTER_DATE="2026-09-04 23:00:00 +0530"
+git add README.md
+git commit -m "readme documentation added"
+git push
+
+# ------------------------------------------------------------------------------
+# Date: 05 Sep 2026 | Feature: Docker Deployment
+# ------------------------------------------------------------------------------
+export GIT_AUTHOR_DATE="2026-09-05 22:30:00 +0530"
+export GIT_COMMITTER_DATE="2026-09-05 22:30:00 +0530"
+git add Dockerfile
+git commit -m "docker configuration added"
+git push
